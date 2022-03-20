@@ -1,0 +1,213 @@
+html{
+    display: grid;
+    gap: 20px;
+}
+
+/*----------------edicion del header----------------*/
+.header{
+    width: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+}
+.header > img:nth-child(2){
+    justify-self: center;
+    align-self: center;
+    height: 70%;
+    grid-area: foto;
+}
+.header > div:nth-child(1){
+    justify-self: center;
+    align-self: center;
+    grid-area: botones;
+}
+.header > section:nth-child(3) {
+    justify-self: center;
+    align-self: center;
+    height: 100%;
+    grid-area: acercaDeMi;
+}
+.header > section:nth-child(3) > h3:nth-child(2) {
+    border-radius: inherit;
+    margin: 10px;
+    background-color:  rgb(142, 226, 226) ;
+}
+.botones-redes{
+    width: 50px;
+    height: 50px;
+    border-radius: 5px;
+    margin: 10px;
+}
+.boton-cv{
+    justify-self: center;
+    align-self: center;
+    width: 100px;
+    height: 100px;
+    border: transparent;
+    margin: 10px;
+    background-color: transparent;
+}
+.img-cv{
+    width: 80%;
+    height: 80%;
+    border-radius: 5px;
+}
+.imagen-boton{
+    width: 100%;
+    height: 100%;
+}
+.img-blandas{
+    width: 200px;
+    height: 100px;
+}
+/*-------------------------------------------------------------*/
+
+/*----------------edicion del main----------------*/
+.main{
+    display: grid;
+    margin: 10px;
+}
+
+.section {
+    margin: 10px;
+    background-color: rgb(89, 184, 184);
+    display: grid;
+    border-radius: 10px;
+}
+.section-2 {
+    margin: 10px;
+    background-color: rgb(142, 226, 226);
+    display: grid;
+    border-radius: 10px;
+    padding: 10px;
+}
+.img{
+    width: 500px;
+}
+.h2 {
+    justify-self: center;
+    align-self: center;
+}
+.main > section:nth-child(1) > section:nth-child(2) > img:nth-child(1) {
+    border-radius: 10px;
+    justify-self: center;
+}
+
+.main >section:nth-child(2) > *,.main >section:nth-child(3) > *{
+    justify-self: center;
+}
+.main > section:nth-child(3) > section:nth-child(2)>img:nth-child(2) {
+    width: 300px;
+    height: 200px;
+    border-radius: 10px;
+    justify-self: center;
+    margin: 10px;
+}
+.imagen-proyecto{
+    margin: 10px;
+    width: 200px;
+    height: 300px;
+    justify-self: center;
+    align-self: center;
+}
+.main > section:nth-child(1){
+    grid-area: estudios;
+}
+.main > section:nth-child(2){
+    grid-area: habilidades;
+}
+.main > section:nth-child(3){
+    grid-area: proyectos;
+}
+.main > section:nth-child(4){
+    grid-area: contacto;
+}
+
+/*----------------------------------------------------*/
+
+.footer{
+    width: 100%;
+    height: 100px;
+    display: grid;
+    background-color: aquamarine;
+    justify-content: center;
+    align-content: center;
+}
+.cajaFooter{
+    width: 50%;
+    justify-self: center;
+}
+
+
+@media screen and (max-width: 780px){
+    html{
+        grid-template-rows: auto auto auto;
+        grid-template-areas: 
+        "header"
+        "main"
+        "footer";
+    }
+    .header{
+        height: 700px;
+        grid-template-rows: 70px 300px 300px;
+        grid-template-areas: 
+        "botones"
+        "foto"
+        "acercaDeMi"
+        ;
+
+    }
+    /* .header > .section:nth-child(3){
+        height: 250px;
+        margin: 30px;
+    } */
+    .main{
+        grid-template-areas: 
+        "estudios"
+        "habilidades"
+        "proyectos"
+        "contacto";
+    }
+    .main > section:nth-child(4)> div:nth-child(2){
+        justify-self: center;
+    }
+}
+
+@media screen and (min-width:781px) {
+    .header{
+        grid-template-columns: 40% 60% ;
+        grid-template-rows: 20% 500px;
+        grid-template-areas: 
+        "botones botones"
+        "foto acercaDeMi"
+        ;
+
+    }
+    .header > section:nth-child(3) {
+        height: 60%;
+    }
+
+
+    .main{
+        grid-template-columns: 30% auto;
+        grid-template-rows: auto auto;
+        grid-template-areas: 
+        "estudios habilidades"
+        "contacto proyectos";
+    }
+    .main > section:nth-child(1){
+        
+    }
+    .main > section:nth-child(2) > div:nth-child(2){
+        display: flex;
+        flex-direction: row;
+    }
+    .main > section:nth-child(3) > div:nth-child(2){
+        display: flex;
+        flex-direction: row;
+        
+    }
+    .main > section:nth-child(4)> div:nth-child(2){
+        justify-self: center;
+    }
+}
